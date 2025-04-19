@@ -9,6 +9,7 @@
       "Courier New", monospace;
     --color-orange-300: oklch(83.7% 0.128 66.29);
     --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-green-950: oklch(26.6% 0.065 152.934);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -235,6 +236,9 @@
   .mx-5 {
     margin-inline: calc(var(--spacing) * 5);
   }
+  .mx-10 {
+    margin-inline: calc(var(--spacing) * 10);
+  }
   .my-5 {
     margin-block: calc(var(--spacing) * 5);
   }
@@ -345,6 +349,9 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -419,11 +426,20 @@
       border-color: color-mix(in oklab, var(--color-white) 50%, transparent);
     }
   }
+  .bg-\[\#0a0b0bb8\] {
+    background-color: #0a0b0bb8;
+  }
+  .bg-\[\#200d03\] {
+    background-color: #200d03;
+  }
   .bg-\[\#da900a\] {
     background-color: #da900a;
   }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .bg-green-950 {
+    background-color: var(--color-green-950);
   }
   .bg-orange-500 {
     background-color: var(--color-orange-500);
@@ -455,6 +471,9 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -466,6 +485,9 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -772,6 +794,11 @@
   .sm\:px-20 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:px-40 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 40);
     }
   }
   .md\:flex {
