@@ -1,0 +1,277 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body class="overflow-x-hidden">
+    <div class="fixed top-0 z-10">
+        <div class="flex flex-col">
+                <div class="h-[100px] bg-white w-screen px-5 sm:px-20 flex justify-between items-center text-[12px] font-bold text-black/70">
+                    <div class="hidden md:flex gap-5">
+                        <a class="hover:text-black transition ease-in duration-300 hover:text-shadow" href="/">HOME</a>
+                        <a class="hover:text-black transition ease-in duration-300 hover:text-shadow" href="">ABOUT US</a>
+                        <a class="hover:text-black transition ease-in duration-300 hover:text-shadow" href="">CONTACT US</a>
+                    </div>
+                    <img class="h-[100px]" src="{% static "images/jh.png" %}" alt="">
+
+                    <div class="fixed top-0 left-0 h-[270px] w-full bg-white px-5 py-2 text-black text-[12px] font-medium shadow-lg 
+                transform -translate-y-full transition-transform duration-300 ease-in-out flex flex-col gap-5" id="menu">
+                    <div class="flex justify-between items-center">
+                        <img class="h-[70px]" src="{% static 'images/jh.png' %}" alt="">
+                        <i class="ri-close-fill text-[25px]" id="closeIcon"></i>
+                    </div>
+                    <div class="flex flex-col gap-5 py-5">
+                        <a class="hover:text-white transition duration-300" href="">HOME</a>
+                        <a class="hover:text-white transition duration-300" href="#about">ABOUT US</a>
+                        <a class="hover:text-white transition duration-300" href="#services">SERVICES</a>
+                        <a class="hover:text-white transition duration-300" href="#contact">CONTACT US</a>
+                    </div>
+                </div>
+
+                <div class="flex md:hidden transition duration-300 text-black" id="menuIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>                          
+                </div>
+            </div>
+
+            
+
+            <div class="">
+                <img class="w-screen" src="{% static "images/bg-sldr.png" %}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-5 sm:mx-40 mt-30 sm:mb-20 sm:mt-30 con">
+        <div class="flex justify-center items-center">
+            <h1 class="text-3xl mb-5">KOLLAM HOUSEBOATS</h1>
+        </div>
+
+        <p class="text-black/60 mb-5">"Kollam Houseboats – Book Now for the Best Houseboat Tours in Kollam. <span class="font-bold">JC'S Holidays</span> offers top-quality houseboat experiences with Deluxe, Premium, and Luxury houseboats. Enjoy reliable service from one of the leading houseboat operators in Kollam – your perfect getaway awaits!"</p>
+
+        <div class="grid sm:grid-cols-2 gap-5 p-5 bg-[#da900a] rounded-2xl mb-5">
+            <div>
+                <img class="rounded-2xl h-[320px] w-full" src="{% static "images/img-10.jpeg" %}" alt="">
+            </div>
+
+            <div>
+                <video class="h-full w-full rounded-2xl"  controls>
+                    <source class="h-full w-full rounded-2xl" src="https://videos.pexels.com/video-files/31510292/13433330_1920_1080_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <p class="text-black/60 mb-5">Kollam is a city brimming with charm, nestled on the banks of the vast and scenic Ashtamudi Lake. A houseboat cruise through these tranquil waters offers the perfect escape—where you can relax, stay, dine, and truly immerse yourself in the timeless beauty of life along Kerala’s backwaters.
+        <br> <br>
+        The most breathtaking view of this picturesque landscape is from the water, aboard a Kollam houseboat gently gliding through the serene backwaters. These traditional country boats are crafted entirely from wood, yet come fully equipped with modern comforts—air-conditioned rooms, beautifully designed bathrooms, and open lounge areas that offer uninterrupted views of the surrounding natural splendor.</p>
+
+        <div class="p-5 bg-[#da900a] rounded-2xl mb-5 flex flex-col justify-center items-center gap-3 text-white shadow-xl/30">
+            <h3 class="text-2xl">CONTACT FOR KOLLAM HOUSEBOAT  BOOKING & ENQUIRIES</h3>
+            <p class="font-bold">Jc'S House Boathouse</p>
+            <p>ASHTAMUDI LAKE, Opposite KSRTC bus stand, Kollam, Kerala 691001</p>
+
+            <div class="grid sm:grid-cols-3 gap-3 place-items-center">
+                <p class="font-bold">Call : + 91 98956 12402, +91 7025089900</p>
+                <p class="font-bold">WhatsApp : +91 91 98956 12402</p>
+                <p class="font-bold">Email : jcholidayskollam@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mx-5 sm:mx-40 mt-10 sm:mb-20 sm:mt-10 con">
+        <h2 class="text-3xl mb-5">KOLLAM HOUSEBOAT TOUR PACKAGES</h1>
+
+        <p class="text-black/60 mb-5">Explore the scenic landscapes of Kerala and its intricate network of interlinked canals with a Day Cruise through the enchanting Ashtamudi backwaters of Kollam. A Kollam Houseboat Day Cruise is one of the best ways to discover and experience the serene beauty of Kerala’s backwaters.</p>
+
+        <div class="grid sm:grid-cols-3 gap-3">
+            
+            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+
+                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+
+                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                    <p>ITINERARY</p>
+                    <p>DURATION: 6 HOURS</p>
+                    <p>One Day Kollam Round Trip Houseboat Package</p>
+                    <p>Check In Time   : 11.00 Am</p>
+                    <p>Check Out Time  : 05.00 Pm</p>
+                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
+                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
+                    <p>Food: Kerala Traditional Food</p>
+                </div>
+
+                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
+                    MORE TOUR DETAILS
+                </a>
+            </div>
+
+            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+
+                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+
+                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                    <p>ITINERARY</p>
+                    <p>DURATION: 6 HOURS</p>
+                    <p>One Day Kollam Round Trip Houseboat Package</p>
+                    <p>Check In Time   : 11.00 Am</p>
+                    <p>Check Out Time  : 05.00 Pm</p>
+                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
+                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
+                    <p>Food: Kerala Traditional Food</p>
+                </div>
+
+                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
+                    MORE TOUR DETAILS
+                </a>
+            </div>
+
+            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+
+                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+
+                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                    <p>ITINERARY</p>
+                    <p>DURATION: 6 HOURS</p>
+                    <p>One Day Kollam Round Trip Houseboat Package</p>
+                    <p>Check In Time   : 11.00 Am</p>
+                    <p>Check Out Time  : 05.00 Pm</p>
+                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
+                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
+                    <p>Food: Kerala Traditional Food</p>
+                </div>
+
+                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
+                    MORE TOUR DETAILS
+                </a>
+            </div>
+
+            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+
+                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+
+                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                    <p>ITINERARY</p>
+                    <p>DURATION: 6 HOURS</p>
+                    <p>One Day Kollam Round Trip Houseboat Package</p>
+                    <p>Check In Time   : 11.00 Am</p>
+                    <p>Check Out Time  : 05.00 Pm</p>
+                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
+                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
+                    <p>Food: Kerala Traditional Food</p>
+                </div>
+
+                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
+                    MORE TOUR DETAILS
+                </a>
+            </div>
+
+            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+
+                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+
+                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                    <p>ITINERARY</p>
+                    <p>DURATION: 6 HOURS</p>
+                    <p>One Day Kollam Round Trip Houseboat Package</p>
+                    <p>Check In Time   : 11.00 Am</p>
+                    <p>Check Out Time  : 05.00 Pm</p>
+                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
+                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
+                    <p>Food: Kerala Traditional Food</p>
+                </div>
+
+                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
+                    MORE TOUR DETAILS
+                </a>
+            </div>
+
+            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+
+                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+
+                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                    <p>ITINERARY</p>
+                    <p>DURATION: 6 HOURS</p>
+                    <p>One Day Kollam Round Trip Houseboat Package</p>
+                    <p>Check In Time   : 11.00 Am</p>
+                    <p>Check Out Time  : 05.00 Pm</p>
+                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
+                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
+                    <p>Food: Kerala Traditional Food</p>
+                </div>
+
+                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
+                    MORE TOUR DETAILS
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mx-5 sm:mx-40 mt-10 sm:mb-20 sm:mt-10 con">
+        <h2 class="text-3xl mb-5">FAQ ABOUT KOLLAM HOUSEBOATS</h2>
+
+        <div class="flex flex-col gap-1 text-black/60 mb-5">
+            <p class="font-bold">What is the cost of houseboat in Kollam?</p>
+            <p>Cost of the houseboat vary depend up on category you choose like deluxe houseboats, Premium houseboats, luxury houseboats etc…..Normal cost for   1 bedroom deluxe houseboat is  Rs.10,000/- and there will hike in tariff in season.</p>
+        </div>
+
+        <div class="flex flex-col gap-1 text-black/60 mb-5">
+            <p class="font-bold">What are the different types of houseboats in Kollam?</p>
+            <p>Cost of the houseboat vary depend up on category you choose like deluxe houseboats, Premium houseboats, luxury houseboats etc…..Normal cost for   1 bedroom deluxe houseboat is  Rs.10,000/- and there will hike in tariff in season.</p>
+        </div>
+
+        <div class="flex flex-col gap-1 text-black/60 mb-5">
+            <p class="font-bold">What kind of amenities can I expect?</p>
+            <p>Starting from single bedroom houseboats to three-bedroom houseboats, you can find plenty of options to book from. While each bedroom comes with an attached toilet, some houseboats even have a living room, dining room and kitchen. Some houseboats also offer private dining rooms, balconies, upper deck, glass walls, etc. Usually 3 staff members are present in houseboats (captain, chef and driver).</p>
+        </div>
+
+        <div class="flex flex-col gap-1 text-black/60 mb-5">
+            <p class="font-bold"> What type of cruises are available in Kollam Houseboats?</p>
+            <p>Overnight stay & day trip are the two major cruises available</p>
+        </div>
+
+        <div class="flex flex-col gap-1 text-black/60 mb-5">
+            <p class="font-bold">Which is preferred- Kollam or Alappuzha Houseboat?</p>
+            <p>The best to pick will be the Kollam-Alappuzha cruise, which allows travellers to check in Kollam and check out at Alappuzha or vice versa. By choosing this cruise, visitors can enjoy the beauty of both Kollam and Alappuzha backwaters..
+
+                You’ll find more houseboat options available in Alappuzha as you cruise through narrow channels. However, there’s heavy traffic in the Alappuzha route. On the other hand, the Kollam cruise will let you have a cruise on a less traffic route.
+                
+                Note: You can also go for the Alapuzha-Kumarakom cruise, which is the longest houseboat cruise in Kerala</p>
+        </div>
+        
+        <div class="flex flex-col gap-1 text-black/60 mb-5">
+            <p class="font-bold">If we book the houseboat, are there any other guests to share with us?</p>
+            <p>No, if you book the houseboat with us, you can enjoy privately. There will not be anyone else to share the houseboat other than the boat staff for your service.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="{% static "js/main.js" %}"></script>
+</body>
+</html>
