@@ -92,141 +92,47 @@
     </div>
 
 
+    
     <div class="mx-5 sm:mx-40 mt-10 sm:mb-20 sm:mt-10 con">
         <h2 class="text-3xl mb-5">KOLLAM HOUSEBOAT TOUR PACKAGES</h1>
 
         <p class="text-black/60 mb-5">Explore the scenic landscapes of Kerala and its intricate network of interlinked canals with a Day Cruise through the enchanting Ashtamudi backwaters of Kollam. A Kollam Houseboat Day Cruise is one of the best ways to discover and experience the serene beauty of Kerala’s backwaters.</p>
-
+        
         <div class="grid sm:grid-cols-3 gap-3">
-            
-            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
-                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
+            {% for p in packages %}
+                <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
+                    <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{{ p.thumbnail.url }}" alt="">
 
-                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
+                    <h3 class="text-lg font-bold text-black/60">{{ p.package_name }}</h3>
 
-                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
-                    <p>ITINERARY</p>
-                    <p>DURATION: 6 HOURS</p>
-                    <p>One Day Kollam Round Trip Houseboat Package</p>
-                    <p>Check In Time   : 11.00 Am</p>
-                    <p>Check Out Time  : 05.00 Pm</p>
-                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
-                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
-                    <p>Food: Kerala Traditional Food</p>
+                    <div class="flex flex-col gap-2 text-black/60 text-[13px]">
+                        <p>ITINERARY</p>
+                        {% for b in p.durations.all %}
+                            <p>DURATION: {{ b.duration }}</p>
+                            <p>Check In Time: {{ b.start_time }}</p>
+                            <p>Check Out Time: {{ b.end_time }}</p>
+                        {% endfor %}
+                        
+                        {% for c in p.start_end_points.all %}
+                            <p>Check In Point: {{ c.starting_point }}</p>
+                            <p>Check Out Point: {{ c.ending_point }}</p>
+                        {% endfor %}
+                        
+                        <p>Places Covering : {{p.places_covering}} </p>
+
+                        {% for d in p.food_styles.all %}
+                            <p>Food: {{ d.food_style }}</p>
+                        {% endfor %}
+                    </div>
+                    <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="{% url 'package' slug=p.slug %}">
+                        MORE TOUR DETAILS
+                    </a>
                 </div>
-
-                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
-                    MORE TOUR DETAILS
-                </a>
-            </div>
-
-            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
-                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
-
-                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
-
-                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
-                    <p>ITINERARY</p>
-                    <p>DURATION: 6 HOURS</p>
-                    <p>One Day Kollam Round Trip Houseboat Package</p>
-                    <p>Check In Time   : 11.00 Am</p>
-                    <p>Check Out Time  : 05.00 Pm</p>
-                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
-                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
-                    <p>Food: Kerala Traditional Food</p>
-                </div>
-
-                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
-                    MORE TOUR DETAILS
-                </a>
-            </div>
-
-            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
-                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
-
-                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
-
-                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
-                    <p>ITINERARY</p>
-                    <p>DURATION: 6 HOURS</p>
-                    <p>One Day Kollam Round Trip Houseboat Package</p>
-                    <p>Check In Time   : 11.00 Am</p>
-                    <p>Check Out Time  : 05.00 Pm</p>
-                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
-                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
-                    <p>Food: Kerala Traditional Food</p>
-                </div>
-
-                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
-                    MORE TOUR DETAILS
-                </a>
-            </div>
-
-            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
-                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
-
-                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
-
-                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
-                    <p>ITINERARY</p>
-                    <p>DURATION: 6 HOURS</p>
-                    <p>One Day Kollam Round Trip Houseboat Package</p>
-                    <p>Check In Time   : 11.00 Am</p>
-                    <p>Check Out Time  : 05.00 Pm</p>
-                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
-                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
-                    <p>Food: Kerala Traditional Food</p>
-                </div>
-
-                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
-                    MORE TOUR DETAILS
-                </a>
-            </div>
-
-            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
-                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
-
-                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
-
-                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
-                    <p>ITINERARY</p>
-                    <p>DURATION: 6 HOURS</p>
-                    <p>One Day Kollam Round Trip Houseboat Package</p>
-                    <p>Check In Time   : 11.00 Am</p>
-                    <p>Check Out Time  : 05.00 Pm</p>
-                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
-                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
-                    <p>Food: Kerala Traditional Food</p>
-                </div>
-
-                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
-                    MORE TOUR DETAILS
-                </a>
-            </div>
-
-            <div class="p-5 shadow-2xl rounded-2xl flex flex-col gap-3">
-                <img class="h-[200px] w-full rounded-tl-2xl rounded-tr-2xl" src="{% static "images/img-10.jpeg" %}" alt="">
-
-                <h3 class="text-lg font-bold text-black/60">Houseboat Full Day Cruise -Ashtamudi Lake Kollam.</h3>
-
-                <div class="flex flex-col gap-2 text-black/60 text-[13px]">
-                    <p>ITINERARY</p>
-                    <p>DURATION: 6 HOURS</p>
-                    <p>One Day Kollam Round Trip Houseboat Package</p>
-                    <p>Check In Time   : 11.00 Am</p>
-                    <p>Check Out Time  : 05.00 Pm</p>
-                    <p>Check In Point : Boat Jetty Opposite KSRTC bus station Kollam</p>
-                    <p>Places Covering : Ashtamudi Lake, Kallada River, Munroe island </p>
-                    <p>Food: Kerala Traditional Food</p>
-                </div>
-
-                <a class="flex justify-center items-center px-2 py-1 text-white bg-orange-500 font-bold rounded hover:scale-101 transition duration-300" href="">
-                    MORE TOUR DETAILS
-                </a>
-            </div>
+            {% endfor %}
         </div>
+        
     </div>
-
+    
 
     <div class="mx-5 sm:mx-40 mt-10 sm:mb-20 sm:mt-10 con">
         <h2 class="text-3xl mb-5">FAQ ABOUT KOLLAM HOUSEBOATS</h2>
